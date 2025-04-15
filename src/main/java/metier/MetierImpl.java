@@ -5,12 +5,13 @@ import dao.IDao;
 import ext.DaoImplV2;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component("metier")
+@Service("metier")
 public class MetierImpl implements IMetier {
     private IDao dao;
 
-    public MetierImpl(@Qualifier("dao") IDao dao) {
+    public MetierImpl(@Qualifier("dao2") IDao dao) {
         this.dao = dao;
     }
     @Override
